@@ -28,12 +28,10 @@
           'password' => 'password_check',
           'confirm_password' => 'is_password_match',
           'csrf_token' => 'signup_form_csrf_token'
-
         ]
       );
 
       // step #2: make sure email is unique (not in the database)
-      $isEmailInUsed = FormValidation::checkEmailUniqueness( $email );
       if ( FormValidation::checkEmailUniqueness( $email ) ) {
         $error = FormValidation::checkEmailUniqueness( $email );
       }
@@ -65,7 +63,7 @@
 
     require dirname(__DIR__) . '/parts/header.php';
 ?>
-    <div class="container my-5 mx-auto" style="max-width: 500px;">
+<div class="container my-5 mx-auto" style="max-width: 500px;">
       <h1 class="h1 mb-4 text-center">Sign Up a New Account</h1>
 
       <div class="card p-4">

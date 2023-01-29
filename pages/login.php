@@ -94,7 +94,11 @@
           <div class="d-grid">
             <button type="submit" class="btn btn-primary">Login</button>
           </div>
-          <input type="hidden" name="csrf_token" value="<?php echo CSRF::getToken( 'login_form' ); ?>" />
+          <input
+            type="hidden"
+            name="csrf_token"
+            value="<?php echo CSRF::getToken( 'login_form' ); ?>"
+            />
         </form>
       </div>
 
